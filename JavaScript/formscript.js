@@ -218,6 +218,7 @@ function clearForm(){
 		document.getElementById(tags[i].id).value="";
 		document.getElementById("errormessage"+tags[i].id).innerHTML="";
 		document.getElementById(tags[i].id).style.borderColor="";
+		document.getElementById("Success").innerHTML="";
 	}
 }
 
