@@ -67,3 +67,28 @@ span{
 hr{
 	border-color:#6699ff;
 }
+/*BookDetails Styles for table*/
+
+.table {
+  border-collapse: collapse;
+  width: 35%;
+  margin-left:400px;
+  border: 1px solid #ddd;
+}
+
+.th, .td {
+  text-align: left;
+  padding: 10px;
+  
+}
+
+.tr:nth-child(even){background-color: #f2f2f2}
+
+.tr:hover {background-color: #ddd;}
+
+.tr{height:50spx;}
+
+.th {
+  background-color: #04AA6D;
+  color: white;
+}
