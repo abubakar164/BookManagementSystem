@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Book Management System</title>
+	<link rel="stylesheet" type="text/css" href="css\style1.css">
+	<script type="text/javascript" src="javaScript\formscript.js"></script>
+</head>
+<body>
+	<div class="divheader">
+		<h1>Welcome To Book Management System</h1>
+	</div><br><br>
+	<div class="divbutton">
+		<a href="Index.html"><button type="button" class="button" style="width:200px;" >Home</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="BookDetails.html"><button type="button" class="button">Show All the Books</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="RegisterNewBook.html"><button type="button" class="button">Register New Book</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="SearchBook.html"><button type="button" class="button">Search for Book</button></a>
+	</div><br><br>
+
+	<div class="divreg">
+		<P class="phead">
+			<strong>New Book Registration Form</strong>
+			<hr>
+		</p>
+		<form>
+			<div id="Success" style="color:green;"></div><br>
+			<label for="bname">Book Name &nbsp;&nbsp;&nbsp;&nbsp;:</label>
+			<input type="text" id="bname" name="register" onblur="validateForm('bname')"><br>
+			<span id="errormessagebname"></span><br>
+			<label for="aname">Author Name &nbsp;:</label>
+			<input type="text" id="aname" name="register" onblur="validateForm('aname')"><br>
+			<span id="errormessageaname"></span><br>
+			<label for="cost">Cost &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+			<input type="text" id="cost" name="register" onblur="validateForm('cost')"><br>
+			<span id="errormessagecost"></span><br>
+			<label for="email">Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+			<input type="text" id="email" name="register" onblur="validateForm('email')"><br>
+			<span id="errormessageemail"></span><br>
+			<label for="category">Category &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+			<select id="category" name="register" onblur="validateForm('category')">
+			<option disabled selected hidden value="">---select Category--- </option>
+			<option>Education&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+			<option>Comics</option>
+			<option>Bussiness</option>
+			<option>Stories</option>
+			<option>Motivational</option>
+			</select><br>
+			<span id="errormessagecategory"></span><br>
+			<label for="description">Description &nbsp;&nbsp;&nbsp;&nbsp;</label><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<textarea style="padding-bottom:50px;padding-left:100px;margin-top:10px;" id="description" name="register" onblur="validateForm('description')"></textarea><br>
+			<span id="errormessagedescription"></span><br>
+			<p style="padding-left:120px;">
+			<input type="button" onclick="validateForm('bysubmit')" style="border-radius:4px;font-weight:bold;width:100px;height:35px;background-color:#6699ff; border:none; color:white;" value="Register">&nbsp;&nbsp;&nbsp;
+			<input type="button" style="border-radius:4px;font-weight:bold;width:100px;height:35px;background-color:#6699ff; border:none; color:white;" value="Cancel">
+
+			</p>
+		</form>
+			<br>
+	</div><br><br>
+	
+	<div class="divfooter">
+		<h3>Address</h3>
+		<address>
+			<b>FPT India Private Limited</b><br>
+			Plot No. 42&43,ASR Crest,Image Garden Road<br>
+			Madhapur,Hyderabad-500081<br>
+			Reach us: <a href="outlook.com">Admin@fsoft.com.vn</a>.<br>
+			Visit us at: <a href="www.fptsoftware.com">FPT</a>.<br>
+			Tel :(+91)987 654 3210<br>
+		</address>
+	</div>
+</body>
+</html>
