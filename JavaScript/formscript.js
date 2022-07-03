@@ -212,3 +212,12 @@ function charactValidation(id){
 	}
 }
 
+function clearForm(){
+	var tags=document.getElementsByName("register");
+	for(var i=0;i<tags.length;i++){
+		document.getElementById(tags[i].id).value="";
+		document.getElementById("errormessage"+tags[i].id).innerHTML="";
+		document.getElementById(tags[i].id).style.borderColor="";
+	}
+}
+
