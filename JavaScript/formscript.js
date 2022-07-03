@@ -98,6 +98,14 @@ function validateForm(id){
 					document.getElementById("errormessage"+tags[i].id).innerHTML="Good";
 					document.getElementById("errormessage"+tags[i].id).style.color="green";
 					document.getElementById(tags[i].id).style.borderColor="";
+					if(tags[i].id == "cost" )
+						flag=numberValidation(tags[i].id);
+					if(tags[i].id == "bname")  
+						flag=charactValidation(tags[i].id);
+					if(tags[i].id == "aname" )
+						flag=charactValidation(tags[i].id);
+					if(tags[i].id == "email")
+						flag=emailValidation(tags[i].id);
 				}
 		}
 			
@@ -160,13 +168,13 @@ function emailValidation(id){
 			document.getElementById("errormessage"+id).innerHTML="Good";
 			document.getElementById("errormessage"+id).style.color="green";
 			document.getElementById(id).style.borderColor="";
-			//return false;
+			return false;
 		}
 		else{
 			document.getElementById("errormessage"+id).innerHTML="Invalid Email Address";
 			document.getElementById("errormessage"+id).style.color="red";
 			document.getElementById(id).style.borderColor="red";
-			//return true;
+			return true;
 		}
 }
 
@@ -177,13 +185,13 @@ function numberValidation(id){
 		document.getElementById("errormessage"+id).innerHTML="Enter Numeric Value Only";
 		document.getElementById("errormessage"+id).style.color="red";
 		document.getElementById(id).style.borderColor="red";
-		//return true;
+		return true;
 	}
 	else{
 		document.getElementById("errormessage"+id).innerHTML="Good";
 		document.getElementById("errormessage"+id).style.color="green";
 		document.getElementById(id).style.borderColor="";
-		//return false;
+		return false;
 	}
 }
 //Character Validation
@@ -194,11 +202,13 @@ function charactValidation(id){
 		document.getElementById("errormessage"+id).innerHTML="Good";
 		document.getElementById("errormessage"+id).style.color="green";
 		document.getElementById(id).style.borderColor="";
+		return false;
 	}
 	else{
 		document.getElementById("errormessage"+id).innerHTML="Enter characters Only";
 		document.getElementById("errormessage"+id).style.color="red";
 		document.getElementById(id).style.borderColor="red";
+		return true;
 	}
 }
 
